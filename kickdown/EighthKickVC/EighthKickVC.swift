@@ -11,6 +11,7 @@ class EighthKickVC: UIViewController {
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .systemBackground
+        scrollView.contentSize.height = 2000
         return scrollView
     }()
     private lazy var avatar: SparrowImageView = {
@@ -32,7 +33,6 @@ class EighthKickVC: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         scrollView.frame = view.bounds
-        scrollView.contentSize.height = 2000
         navigationController?.navigationBar.subviews.forEach({ someSubview in
             if someSubview.subviews.contains(where: { $0 is UILabel }) && !someSubview.subviews.contains(where: { $0 is SparrowImageView }) {
                 someSubview.addSubview(avatar)
@@ -45,11 +45,5 @@ class EighthKickVC: UIViewController {
                 ])
             }
         })
-    }
-}
-
-final class SparrowImageView: UIImageView {
-    override var alignmentRectInsets: UIEdgeInsets {
-        return .zero
     }
 }

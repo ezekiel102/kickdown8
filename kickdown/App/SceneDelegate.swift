@@ -18,14 +18,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
 }
-
-
-class CustomNavigationBar: UINavigationBar {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        print(1111)
-        prefersLargeTitles = true
-        largeContentImage = UIImage(systemName: "person.crop.circle.fill")
-        largeContentTitle = "AVATAR"
-    }
-}
