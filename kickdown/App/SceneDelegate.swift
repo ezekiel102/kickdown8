@@ -14,8 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController(rootViewController: EighthKickVC())
-//        let navigationController = UINavigationController(navigationBarClass: CustomNavigationBar.self, toolbarClass: nil)
-//        navigationController.pushViewController(EighthKickVC(), animated: true)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
